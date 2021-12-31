@@ -27,6 +27,21 @@ class Counter extends Component {
         >
           +1
         </button>
+        <button //onclick을 통해 버튼이 클릿 되었을 때 호출할 함수를 지정
+          onClick={() => {
+            this.setState(
+              {
+                number: number - 1,
+              },
+              () => {
+                console.log('방금 State가 호출됐음');
+                console.log(this.state);
+              }
+            );
+          }}
+        >
+          -1
+        </button>
       </div>
     );
   }
